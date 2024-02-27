@@ -2,10 +2,10 @@ import LocaleSwitcher from './locale-switcher'
 import CustomLink from './custom-link'
 
 import { Locale } from '@/i18n.config'
-import { getDictionary } from '@/lib/dictionary'
+import { getNavigationDictionary } from '@/lib/dictionary'
 
 export default async function Header({ lang }: { lang: Locale }) {
-  const { navigation } = await getDictionary(lang)
+  const { navigation } = await getNavigationDictionary(lang)
 
   return (
     <header className='py-6'>
